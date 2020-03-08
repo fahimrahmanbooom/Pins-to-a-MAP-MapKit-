@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0ADD2C2415614900EF0C84 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0ADD2B2415614900EF0C84 /* MapKit.framework */; };
 		FFD24E5824142A2E00200472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD24E5724142A2E00200472 /* AppDelegate.swift */; };
 		FFD24E5A24142A2E00200472 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD24E5924142A2E00200472 /* SceneDelegate.swift */; };
 		FFD24E5C24142A2E00200472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD24E5B24142A2E00200472 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF0ADD2B2415614900EF0C84 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FFD24E5424142A2E00200472 /* Pins to a MAP (MapKit).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pins to a MAP (MapKit).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD24E5724142A2E00200472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD24E5924142A2E00200472 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0ADD2C2415614900EF0C84 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF0ADD2A2415614800EF0C84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF0ADD2B2415614900EF0C84 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FFD24E4B24142A2E00200472 = {
 			isa = PBXGroup;
 			children = (
 				FFD24E5624142A2E00200472 /* Pins to a MAP (MapKit) */,
 				FFD24E5524142A2E00200472 /* Products */,
+				FF0ADD2A2415614800EF0C84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

@@ -9,34 +9,44 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
+        .darkContent
     }
     
     @IBOutlet weak var mapView: MKMapView!
     
     let locations = [
         
-        Location(title: "New York, NY", latitude: 40.713054, longitude: -74.007228),
-        Location(title: "Los Angeles, CA", latitude: 34.052238, longitude: -118.243344),
-        Location(title: "Chicago, IL", latitude: 41.883229, longitude: -87.632398)
+        Location(title: "Dr. James Golf Course", latitude: 40.003252, longitude: -86.0655897),
+        Location(title: "Avon Town Hall", latitude: 39.7636057, longitude: -86.4080829),
+        Location(title: "Brookside Park", latitude: 39.7897185, longitude: -86.1070623)
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.delegate = self
+        annotationsOnMap()
+        
+    }
+    
+    func annotationsOnMap() {
+        
         for location in locations {
+
+            let annotations = MKPointAnnotation()
+
+            annotations.title = location.title
+            annotations.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             
-            let annotation = MKPointAnnotation()
+            mapView.addAnnotation(annotations)
             
-            annotation.title = location.title
-            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            let locationCoordinate2d = annotations.coordinate
+            let span = MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+            let region = MKCoordinateRegion(center: locationCoordinate2d, span: span)
             
-            let region = MKCoordinateRegion(center: annotation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
-            
-            mapView.addAnnotation(annotation)
             mapView.setRegion(region, animated: true)
         }
     }

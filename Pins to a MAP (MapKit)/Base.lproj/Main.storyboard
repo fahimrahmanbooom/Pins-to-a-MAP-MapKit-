@@ -16,18 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8xI-FC-3sV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8xI-FC-3sV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="45v-Wn-p3n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8xI-FC-3sV" secondAttribute="trailing" id="9zm-Ei-Nbb"/>
-                            <constraint firstItem="8xI-FC-3sV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fj2-Jy-aH7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8xI-FC-3sV" secondAttribute="bottom" id="amq-yR-QcA"/>
+                            <constraint firstItem="8xI-FC-3sV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fj2-Jy-aH7"/>
+                            <constraint firstAttribute="bottom" secondItem="8xI-FC-3sV" secondAttribute="bottom" id="amq-yR-QcA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jU1-ht-EGG"/>
                     <connections>
                         <outlet property="mapView" destination="8xI-FC-3sV" id="FIh-x1-xOx"/>
                     </connections>
